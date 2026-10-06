@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  medicare-command-center:
+    build: .
+    container_name: medicare_command_center
+    ports:
+      - "5000:5000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=5000
+    restart: unless-stopped
